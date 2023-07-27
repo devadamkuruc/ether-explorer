@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Table from "./Table";
 import Transaction from "./Transaction";
+import Searchbar from "./Searchbar";
+import WalletBanner from "./WalletBanner";
 
 export {
   ERC20Token,
@@ -14,4 +16,6 @@ export {
   Navbar,
   Table,
   Transaction,
+  Searchbar,
+  WalletBanner,
 };

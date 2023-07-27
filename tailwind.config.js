@@ -17,6 +17,7 @@ module.exports = {
       },
       width: {
         215: "215px",
+        324: "324px",
         357: "357px",
         488: "488px",
         557: "557px",
@@ -30,6 +31,7 @@ module.exports = {
         327: "327px",
       },
       height: {
+        128: "128px",
         300: "300px",
         488: "488px",
         557: "557px",
@@ -71,6 +73,7 @@ module.exports = {
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
+      nunito: ["Nunito", "sans-serif"],
     },
   },
   variants: {
