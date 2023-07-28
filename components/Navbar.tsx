@@ -6,6 +6,7 @@ import axios from "axios";
 import Link from "next/link";
 
 import EtherLogo from "@/assets/EtherLogo";
+import EtherLogoBlack from "@/assets/EtherLogoBlack";
 
 const Navbar = () => {
   const [ethPrice, setEthPrice] = useState("");
