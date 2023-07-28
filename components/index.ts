@@ -7,6 +7,7 @@ import Table from "./Table";
 import Transaction from "./Transaction";
 import Searchbar from "./Searchbar";
 import WalletBanner from "./WalletBanner";
+import MainBoxes from "./MainBoxes";
 
 export {
   ERC20Token,
@@ -18,4 +19,5 @@ export {
   Transaction,
   Searchbar,
   WalletBanner,
+  MainBoxes,
 };
