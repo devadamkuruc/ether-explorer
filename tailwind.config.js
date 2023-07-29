@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "ether-gray-1": "rgba(255,255,255, 0.15)",
-        "ether-gray-2": "rgba(255,255,255, 0.10)",
-        "ether-gray-3": "rgba(255,255,255, 0.05)",
+        "ether-grey-1": "rgba(255,255,255, 0.05)",
+        "ether-grey-2": "rgba(255,255,255, 0.10)",
+        "ether-grey-3": "rgba(255,255,255, 0.15)",
+        "ether-grey-4": "rgba(255,255,255, 0.75)",
         "ether-blue": "#0D37A4",
         "ether-pink-1": "rgba(255,0,153,1)",
         "ether-pink-2": "rgba(255,0,153,0.55)",
