@@ -18,8 +18,7 @@ const RecentTransationItem = ({ transactionItem }: Props) => {
             </span>
           </div>
           <div className="text-ether-grey-5 text-sm">
-            Chain{" "}
-            <span className="text-ether-pink-1">{transactionItem.chain}</span>
+            Chain <span className="text-white">{transactionItem.chain}</span>
           </div>
         </div>
         <div className="flex justify-between">

@@ -18,7 +18,7 @@ const Home = () => {
       <div className="w-full flex justify-center flex-col mt-16">
         <MainBoxes />
 
-        <div className="flex gap-3 mt-16">
+        <div className="flex gap-6 mt-16">
           <RecentTransactions />
           <RecentBlocks />
         </div>
