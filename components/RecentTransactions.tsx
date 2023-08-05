@@ -29,7 +29,7 @@ const RecentTransactions = () => {
         <Button title="View All" classStyles="hover:bg-ether-grey-3" />
       </div>
 
-      <div className="px-6 pb-6 h-544 overflow-y-scroll">
+      <div className="px-6 mb-6 h-544 overflow-y-scroll">
         {transactionItems.map((item, index) => (
           <RecentTransationItem transactionItem={item} key={index} />
         ))}
