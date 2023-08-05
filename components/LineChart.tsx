@@ -26,6 +26,14 @@ const LineChart = () => {
     datasets: [],
   });
   const [chartOptions, setChartOptions] = useState({});
+
+  useEffect(() => {
+    setChartData({
+      labels: [],
+      datasets: [],
+    });
+  }, []);
+
   return (
     <>
       <Line data={chartData} options={chartOptions} />

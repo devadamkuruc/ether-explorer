@@ -9,6 +9,10 @@ import Searchbar from "./Searchbar";
 import WalletBanner from "./WalletBanner";
 import MainBoxes from "./MainBoxes";
 import LineChart from "./LineChart";
+import RecentTransactions from "./RecentTransactions";
+import RecentBlocks from "./RecentBlocks";
+import Button from "./Button";
+import RecentTransationItem from "./RecentTransationItem";
 
 export {
   ERC20Token,
@@ -22,4 +26,8 @@ export {
   WalletBanner,
   MainBoxes,
   LineChart,
+  RecentTransactions,
+  RecentBlocks,
+  Button,
+  RecentTransationItem,
 };

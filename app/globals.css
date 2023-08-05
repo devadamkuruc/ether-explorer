@@ -4,6 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
 .eth-gradient-1 {
   background: linear-gradient(101.12deg, #3b82f6 0%, #3b3bb0 100%);
 }
@@ -54,6 +76,12 @@
 .flexStartCenter {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+}
+
+.flexEndCenter {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 

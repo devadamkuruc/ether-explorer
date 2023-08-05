@@ -1,4 +1,10 @@
-import { MainBoxes, Searchbar, WalletBanner } from "@/components";
+import {
+  MainBoxes,
+  RecentBlocks,
+  RecentTransactions,
+  Searchbar,
+  WalletBanner,
+} from "@/components";
 import React from "react";
 
 const Home = () => {
@@ -9,8 +15,13 @@ const Home = () => {
         <WalletBanner />
       </div>
 
-      <div className="w-full flex justify-center mt-16">
+      <div className="w-full flex justify-center flex-col mt-16">
         <MainBoxes />
+
+        <div className="flex gap-3 mt-16">
+          <RecentTransactions />
+          <RecentBlocks />
+        </div>
       </div>
     </div>
   );
