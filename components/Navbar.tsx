@@ -12,7 +12,7 @@ const Navbar = () => {
   const [ethPrice, setEthPrice] = useState("");
 
   return (
-    <nav className="flex justify-center p-4 z-10">
+    <nav className="flex justify-center px-28 py-4 z-10">
       <div className="flexStartCenter w-full minmd:w-4/5">
         <Link href="/" className="text-white font-semibold text-2xl">
           Ether Explorer

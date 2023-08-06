@@ -51,7 +51,7 @@ const blockchainNav = [
 const Footer = () => {
   return (
     <div className="flex flex-col w-full bg-ether-grey-1 mt-24">
-      <div className="flex gap-56 px-4 pt-16 pb-14 border-b-2 border-solid border-ether-grey-2">
+      <div className="flex gap-48 px-28 pt-16 pb-14 border-b-2 border-solid border-ether-grey-2">
         <div className="flex flex-2">
           <div className="flex flex-col">
             <Link href="/" className="text-white font-semibold text-2xl">
@@ -84,7 +84,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-between px-4 py-8">
+      <div className="flex justify-between px-28 py-8">
         <div className="text-sm text-ether-grey-5">
           Copyright @{new Date().getFullYear()} Ether Explorer
         </div>

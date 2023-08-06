@@ -1,4 +1,10 @@
 import React from "react";
+import { LineChart } from "@/components";
+
+const data = [
+  32000, 33000, 35000, 42000, 46000, 54000, 62000, 45000, 38000, 56000, 73000,
+  68000, 65000, 58000,
+];
 
 const MainBoxes = () => {
   return (
@@ -21,7 +27,9 @@ const MainBoxes = () => {
           <p className="text-white text-2xl font-semibold">$0.0002</p>
         </div>
       </div>
-      <div className="w-1/2 bg-ether-grey-1 rounded-3xl"></div>
+      <div className="w-1/2 bg-ether-grey-1 rounded-3xl p-6">
+        <LineChart data={data} />
+      </div>
     </div>
   );
 };
