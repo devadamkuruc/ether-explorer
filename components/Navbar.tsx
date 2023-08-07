@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link href="/" className="text-white font-semibold text-2xl">
           Ether Explorer
         </Link>
-        <div className="flex ml-12 text-white">
+        <div className="flex items-center ml-12 text-white">
           <EtherLogo />
           <div className="ml-2 font-semibold">
             ETH <span className="ml-2 font-normal">$23.8</span>

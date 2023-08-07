@@ -1,5 +1,6 @@
 import SuccessIcon from "@/assets/SuccessIcon";
 import { TransactionItem } from "@/types/Transaction";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -24,10 +25,21 @@ const RecentTransationItem = ({ transactionItem }: Props) => {
         <div className="flex justify-between">
           <div className="text-ether-grey-5 text-sm">
             From{" "}
-            <span className="text-ether-pink-1">{transactionItem.from}</span>
+            <Link
+              href={`/address/${transactionItem.from}`}
+              className="text-ether-pink-1"
+            >
+              {transactionItem.from}
+            </Link>
           </div>
           <div className="text-ether-grey-5 text-sm">
-            To <span className="text-ether-pink-1">{transactionItem.to}</span>
+            To{" "}
+            <Link
+              href={`/address/${transactionItem.to}`}
+              className="text-ether-pink-1"
+            >
+              {transactionItem.to}
+            </Link>
           </div>
         </div>
       </div>

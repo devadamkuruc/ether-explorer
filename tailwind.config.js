@@ -17,7 +17,7 @@ module.exports = {
         "ether-blue": "#0D37A4",
         "ether-pink-1": "rgba(255,0,153,1)",
         "ether-pink-2": "rgba(255,0,153,0.55)",
-        "ether-orange": "rgba(236,150,122,0.25)",
+        "ether-orange": "rgba(236,150,122,0.55)",
       },
       width: {
         215: "215px",
