@@ -36,15 +36,15 @@ const blockchainNav = [
   },
   {
     label: "Pending Transactions",
-    to: "/pendingTxs",
+    to: "/txsPending",
   },
   {
     label: "Blocks",
     to: "/blocks",
   },
   {
-    label: "Top Addresses",
-    to: "/addresses",
+    label: "Top Accounts",
+    to: "/accounts",
   },
 ];
 

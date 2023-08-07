@@ -13,6 +13,7 @@ import RecentTransactions from "./RecentTransactions";
 import RecentBlocks from "./RecentBlocks";
 import Button from "./Button";
 import RecentTransationItem from "./RecentTransationItem";
+import RecentBlockItem from "./RecentBlockItem";
 
 export {
   ERC20Token,
@@ -30,4 +31,5 @@ export {
   RecentBlocks,
   Button,
   RecentTransationItem,
+  RecentBlockItem,
 };

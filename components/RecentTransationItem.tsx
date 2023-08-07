@@ -13,10 +13,13 @@ const RecentTransationItem = ({ transactionItem }: Props) => {
       <div className="flex flex-col gap-y-4 flex-2">
         <div className="flex justify-between">
           <div className="text-ether-grey-5 text-sm">
-            Request Key{" "}
-            <span className="text-ether-pink-1">
-              {transactionItem.requestKey}
-            </span>
+            Hash{" "}
+            <Link
+              href={`/tx/${transactionItem.txHash}`}
+              className="text-ether-pink-1"
+            >
+              {transactionItem.txHash}
+            </Link>
           </div>
           <div className="text-ether-grey-5 text-sm">
             Chain <span className="text-white">{transactionItem.chain}</span>

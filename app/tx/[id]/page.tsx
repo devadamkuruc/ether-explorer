@@ -1,6 +1,8 @@
 import React from "react";
 
-const Transaction = () => {
+interface Props {}
+
+const Transaction = ({}: Props) => {
   return <div>Transaction</div>;
 };
 

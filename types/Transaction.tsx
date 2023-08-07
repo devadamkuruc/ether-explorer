@@ -1,5 +1,5 @@
 export interface TransactionItem {
-  requestKey: string;
+  txHash: string;
   chain: number;
   from: string;
   to: string;

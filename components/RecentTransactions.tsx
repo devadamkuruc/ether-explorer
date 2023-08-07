@@ -1,8 +1,9 @@
-import React from "react";
-import { Button, RecentTransationItem } from "@/components";
+import Link from "next/link";
+
+import { RecentTransationItem } from "@/components";
 
 const transactionItem = {
-  requestKey: "Q-KZS5A...u9IAT4",
+  txHash: "Q-KZS5A...u9IAT4",
   chain: 8,
   from: "k:16c2s...e3094f",
   to: "k:f9bc1...ae6952",
@@ -26,7 +27,12 @@ const RecentTransactions = () => {
         <h2 className="flex items-center text-white font-semibold text-lg">
           Recent Transactions
         </h2>
-        <Button title="View All" classStyles="hover:bg-ether-grey-3" />
+        <Link
+          className="hover:bg-ether-grey-3 py-2 px-4 bg-ether-grey-2 rounded-lg text-white cursor-pointer text-sm font-semibold"
+          href="/txs"
+        >
+          View All
+        </Link>
       </div>
 
       <div className="px-6 mb-6 h-544 overflow-y-scroll">

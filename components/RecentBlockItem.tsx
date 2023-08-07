@@ -30,7 +30,7 @@ const RecentBlockItem = ({ blockItem }: Props) => {
       </div>
       <div className="flex flex-col gap-y-4 flex-1">
         <Link
-          href={`/txs?block=${blockItem.transactions}`}
+          href={`/txs?block=${blockItem.block}`}
           className="flexEndCenter text-sm text-ether-pink-1"
         >
           {blockItem.transactions}

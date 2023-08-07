@@ -1,6 +1,6 @@
-import React from "react";
-import { Button, RecentTransationItem } from "@/components";
-import RecentBlockItem from "./RecentBlockItem";
+import Link from "next/link";
+
+import { RecentBlockItem } from "@/components";
 
 const blockItem = {
   block: 3081316,
@@ -26,7 +26,12 @@ const RecentBlocks = () => {
         <h2 className="flex items-center text-white font-semibold text-lg">
           Recent Blocks
         </h2>
-        <Button title="View All" classStyles="hover:bg-ether-grey-3" />
+        <Link
+          className="hover:bg-ether-grey-3 py-2 px-4 bg-ether-grey-2 rounded-lg text-white cursor-pointer text-sm font-semibold"
+          href="/blocks"
+        >
+          View All
+        </Link>
       </div>
 
       <div className="px-6 mb-6 h-544 overflow-y-scroll">
