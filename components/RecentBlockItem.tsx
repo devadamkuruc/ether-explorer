@@ -1,7 +1,6 @@
-import SuccessIcon from "@/assets/SuccessIcon";
-import { BlockItem } from "@/types/Block";
 import Link from "next/link";
-import React from "react";
+
+import { BlockItem } from "@/types/Block";
 
 interface Props {
   blockItem: BlockItem;

@@ -3,10 +3,10 @@ import Link from "next/link";
 import { RecentTransationItem } from "@/components";
 
 const transactionItem = {
-  txHash: "Q-KZS5A...u9IAT4",
+  txHash: "0x61b01ed45108e34bd9eab853c48bd16f424453869a055c8093ff21ed8f234816",
   chain: 8,
-  from: "k:16c2s...e3094f",
-  to: "k:f9bc1...ae6952",
+  from: "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5",
+  to: "0xeEE27662c2B8EBa3CD936A23F039F3189633e4C8",
   status: "Success",
   date: "2022-10-04 06:37:20",
 };

@@ -1,5 +1,6 @@
 import SuccessIcon from "@/assets/SuccessIcon";
 import { TransactionItem } from "@/types/Transaction";
+import { shortenAddress } from "@/utils";
 import Link from "next/link";
 import React from "react";
 
@@ -13,12 +14,12 @@ const RecentTransationItem = ({ transactionItem }: Props) => {
       <div className="flex flex-col gap-y-4 flex-2">
         <div className="flex justify-between">
           <div className="text-ether-grey-5 text-sm">
-            Hash{" "}
+            Transaction Hash{" "}
             <Link
               href={`/tx/${transactionItem.txHash}`}
               className="text-ether-pink-1"
             >
-              {transactionItem.txHash}
+              {shortenAddress(transactionItem.txHash)}
             </Link>
           </div>
           <div className="text-ether-grey-5 text-sm">
@@ -32,7 +33,7 @@ const RecentTransationItem = ({ transactionItem }: Props) => {
               href={`/address/${transactionItem.from}`}
               className="text-ether-pink-1"
             >
-              {transactionItem.from}
+              {shortenAddress(transactionItem.from)}
             </Link>
           </div>
           <div className="text-ether-grey-5 text-sm">
@@ -41,7 +42,7 @@ const RecentTransationItem = ({ transactionItem }: Props) => {
               href={`/address/${transactionItem.to}`}
               className="text-ether-pink-1"
             >
-              {transactionItem.to}
+              {shortenAddress(transactionItem.to)}
             </Link>
           </div>
         </div>
