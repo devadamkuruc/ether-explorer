@@ -27,7 +27,7 @@ const MainBoxes = () => {
           <p className="text-white text-2xl font-semibold">$0.0002</p>
         </div>
       </div>
-      <div className="w-1/2 bg-ether-grey-1 rounded-3xl p-6">
+      <div className="w-1/2 bg-ether-grey-1 rounded-3xl p-6 relative">
         <LineChart data={data} />
       </div>
     </div>

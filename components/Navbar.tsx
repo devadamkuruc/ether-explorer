@@ -32,7 +32,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="flex justify-center px-28 py-4 z-10">
+    <nav className="flex justify-center px-28 py-6 z-10">
       <div className="flexStartCenter w-full">
         <Link href="/" className="text-white font-semibold text-2xl">
           Ether Explorer
