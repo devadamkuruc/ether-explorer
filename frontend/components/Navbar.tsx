@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import axios from "axios";
 import Link from "next/link";
+import Moralis from "moralis";
+import { EvmChain } from "@moralisweb3/common-evm-utils";
 
 import EtherLogo from "@/assets/EtherLogo";
 import EtherLogoBlack from "@/assets/EtherLogoBlack";
