@@ -11,23 +11,21 @@ import EtherLogo from "@/assets/EtherLogo";
 import EtherLogoBlack from "@/assets/EtherLogoBlack";
 
 const Navbar = () => {
-  const [ethPrice, setEthPrice] = useState("");
+  const [ethPrice, setEthPrice] = useState<number | null>(null);
 
   const getEtherPrice = async () => {
     try {
-      axios
-        .get(
-          `https://api.etherscan.io/api?module=stats&action=ethprice&apikey=${process.env.NEXT_PUBLIC_ETHERSCAN_API_KEY}`
-        )
-        .then((response) => {
-          if (response) {
-            setEthPrice(response.data.result.ethusd);
-          }
-        });
+      axios.get("http://localhost:5001/getethprice").then((response) => {
+        if (response) {
+          setEthPrice(response.data.usdPrice);
+        }
+      });
     } catch (error) {
       console.log(error);
     }
   };
+
+  console.log(ethPrice);
 
   useEffect(() => {
     getEtherPrice();
@@ -42,7 +40,10 @@ const Navbar = () => {
         <div className="flex items-center ml-12 text-white">
           <EtherLogo />
           <div className="ml-2 font-semibold">
-            ETH <span className="ml-2 font-normal">${ethPrice}</span>
+            ETH{" "}
+            <span className="ml-2 font-normal">
+              ${ethPrice ? ethPrice.toFixed(2) : ""}
+            </span>
             <span className="ml-1 font-normal text-green-500">(+1.85%)</span>
           </div>
         </div>
