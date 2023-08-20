@@ -29,6 +29,15 @@ app.get("/getethprice", async (req, res) => {
   }
 });
 
+app.get("/getethmarketcap", async (req, res) => {
+  try {
+    const response =
+      await Moralis.EvmApi.marketData.getTopERC20TokensByMarketCap();
+
+    console.log(response);
+  } catch (error) {}
+});
+
 app.get("/getblockinfo", async (req, res) => {
   try {
     const latestBlock = await Moralis.EvmApi.block.getDateToBlock({
