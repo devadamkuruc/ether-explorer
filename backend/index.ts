@@ -34,27 +34,41 @@ app.get("/getethmarketcap", async (req, res) => {
     const response =
       await Moralis.EvmApi.marketData.getTopERC20TokensByMarketCap();
 
-    console.log(response);
-  } catch (error) {}
+    const wrappedEtherObject = response.result.find(
+      (item) => item.rank === 1 && item.tokenSymbol === "WETH"
+    );
+
+    return res.status(200).json(wrappedEtherObject?.marketCapUsd);
+  } catch (error) {
+    console.log(`Something went wrong with market cap: ${error}`);
+    return res.status(400).json();
+  }
 });
 
 app.get("/getblockinfo", async (req, res) => {
   try {
     const latestBlock = await Moralis.EvmApi.block.getDateToBlock({
-      date: Date.now().toString(),
+      date: new Date(Date.now()),
       chain: ethChain,
     });
 
-    let blockNrOrParentHash = latestBlock.toJSON().block;
+    let blockNrOrParentHash: number | string = latestBlock.raw.block;
     let previousBlockInfo = [];
 
     for (let i = 0; i < 5; i++) {
+      console.log(i);
+      console.log(blockNrOrParentHash);
       const previousBlockNrs = await Moralis.EvmApi.block.getBlock({
         chain: ethChain,
         blockNumberOrHash: blockNrOrParentHash.toString(),
       });
 
-      blockNrOrParentHash = Number(previousBlockNrs?.toJSON().parent_hash);
+      let parentHash = previousBlockNrs?.raw.parent_hash;
+
+      if (parentHash !== undefined) {
+        blockNrOrParentHash = parentHash;
+        console.log(blockNrOrParentHash);
+      }
 
       if (i == 0) {
         previousBlockInfo.push({
@@ -70,16 +84,16 @@ app.get("/getblockinfo", async (req, res) => {
         });
       }
       previousBlockInfo.push({
-        blockNumber: previousBlockNrs?.toJSON().number,
-        totalTransactions: previousBlockNrs?.toJSON().transaction_count,
-        gasUsed: previousBlockNrs?.toJSON().gas_used,
-        miner: previousBlockNrs?.toJSON().miner,
-        time: previousBlockNrs?.toJSON().timestamp,
+        blockNumber: previousBlockNrs?.raw.number,
+        totalTransactions: previousBlockNrs?.raw.transaction_count,
+        gasUsed: previousBlockNrs?.raw.gas_used,
+        miner: previousBlockNrs?.raw.miner,
+        time: previousBlockNrs?.raw.timestamp,
       });
     }
 
     const response = {
-      latestBlock: latestBlock.toJSON().block,
+      latestBlock: latestBlock.raw.block,
       previousBlockInfo,
     };
 

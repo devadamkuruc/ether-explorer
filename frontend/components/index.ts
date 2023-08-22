@@ -7,7 +7,7 @@ import Table from "./Table";
 import Transaction from "./Transaction";
 import Searchbar from "./Searchbar";
 import WalletBanner from "./WalletBanner";
-import MainBoxes from "./MainBoxes";
+import HeroSection from "./HeroSection";
 import LineChart from "./LineChart";
 import RecentTransactions from "./RecentTransactions";
 import RecentBlocks from "./RecentBlocks";
@@ -25,7 +25,7 @@ export {
   Transaction,
   Searchbar,
   WalletBanner,
-  MainBoxes,
+  HeroSection,
   LineChart,
   RecentTransactions,
   RecentBlocks,

@@ -1,11 +1,10 @@
 import {
-  MainBoxes,
+  HeroSection,
   RecentBlocks,
   RecentTransactions,
   Searchbar,
   WalletBanner,
 } from "@/components";
-import React from "react";
 
 const Home = () => {
   return (
@@ -16,7 +15,7 @@ const Home = () => {
       </div>
 
       <div className="w-full flex justify-center flex-col mt-16">
-        <MainBoxes />
+        <HeroSection />
 
         <div className="flex gap-6 mt-16">
           <RecentTransactions />

@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import { LineChart } from "@/components";
 
 const data = [
@@ -6,7 +10,35 @@ const data = [
   68000, 65000, 58000,
 ];
 
-const MainBoxes = () => {
+const HeroSection = () => {
+  const [ethMarketCapUsd, setEthMarketCapUsd] = useState("");
+
+  const getEthMarketCap = async () => {
+    try {
+      const response = await axios.get("http://localhost:5001/getethmarketcap");
+      if (response) {
+        setEthMarketCapUsd(response.data);
+      }
+    } catch (error) {
+      console.log(`Something went wrong requesting eth market cap: ${error}`);
+    }
+  };
+
+  const getBlockInfo = async () => {
+    try {
+      const response = await axios.get("http://localhost:5001/getblockinfo");
+
+      console.log(response);
+    } catch (error) {
+      console.log(`Something went wrong requesting eth block info: ${error}`);
+    }
+  };
+
+  useEffect(() => {
+    getEthMarketCap();
+    getBlockInfo();
+  }, []);
+
   return (
     <div className="flex w-full gap-6 mt-18 h-228">
       <div className="w-1/2 grid gap-3 grid-cols-2 grid-rows-2">
@@ -20,7 +52,9 @@ const MainBoxes = () => {
         </div>
         <div className="flexCenterStart flex-col bg-ether-grey-1 rounded-3xl p-12">
           <p className="text-ether-grey-6 text-sm">Market Cap</p>
-          <p className="text-white text-2xl font-semibold">$3.1 B</p>
+          <p className="text-white text-2xl font-semibold">
+            ${(Number(ethMarketCapUsd) / 1000000000).toFixed(2)} B
+          </p>
         </div>
         <div className="flexCenterStart flex-col bg-ether-grey-1 rounded-3xl p-12">
           <p className="text-ether-grey-6 text-sm">Avg Gas Price</p>
@@ -34,4 +68,4 @@ const MainBoxes = () => {
   );
 };
 
-export default MainBoxes;
+export default HeroSection;
